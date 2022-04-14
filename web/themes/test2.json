@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "3b9e56f6-3aae-4fb3-9be0-9ba50ebb6aac",
+		"name": "Verser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "331ba30c-8692-4585-aa8b-dbe4f1d66079",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"verser_token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "username={{verser_username}}&password={{verser_password}}&grant_type=password"
+				},
+				"url": {
+					"raw": "https://{{verser_env}}.com.au/JMSGatewayAPI/Token",
+					"protocol": "https",
+					"host": [
+						"{{verser_env}}",
+						"com",
+						"au"
+					],
+					"path": [
+						"JMSGatewayAPI",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{verser_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{verser_env}}.com.au/JMSGatewayAPI/Assets/StockAvailable",
+					"protocol": "https",
+					"host": [
+						"{{verser_env}}",
+						"com",
+						"au"
+					],
+					"path": [
+						"JMSGatewayAPI",
+						"Assets",
+						"StockAvailable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{verser_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"TIABOrderId\": \"ORD000000009136R\",\r\n        \"Salutation\": \"Mrs\",\r\n        \"FirstName\": \"Jeanette\",\r\n        \"Surname\": \"Rotteveel\",\r\n        \"AddressLine1\": \"1325 JACKSONS TRK\",\r\n        \"AddressLine2\": null,\r\n        \"AddressLine3\": null,\r\n        \"Locality\": \"JINDIVICK\",\r\n        \"State\": \"VIC\",\r\n        \"Postcode\": \"3818\",\r\n        \"ContactNumber\": \"0429920093\",\r\n        \"OrderType\": \"PhoneSim\",\r\n        \"SKU\": \"S864BK\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{verser_env}}.com.au/JMSGatewayAPI/Order/CreateOrder",
+					"protocol": "https",
+					"host": [
+						"{{verser_env}}",
+						"com",
+						"au"
+					],
+					"path": [
+						"JMSGatewayAPI",
+						"Order",
+						"CreateOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order - SIM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{verser_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"TIABOrderId\": \"ORD000000009136R\",\r\n        \"Salutation\": \"Mrs\",\r\n        \"FirstName\": \"Jeanette\",\r\n        \"Surname\": \"Rotteveel\",\r\n        \"AddressLine1\": \"1325 JACKSONS TRK\",\r\n        \"AddressLine2\": null,\r\n        \"AddressLine3\": null,\r\n        \"Locality\": \"JINDIVICK\",\r\n        \"State\": \"VIC\",\r\n        \"Postcode\": \"3818\",\r\n        \"ContactNumber\": \"0429920093\",\r\n        \"OrderType\": \"PhoneSim\",\r\n        \"SKU\": \"S864BK\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{verser_env}}.com.au/JMSGatewayAPI/Order/CreateSimOrder",
+					"protocol": "https",
+					"host": [
+						"{{verser_env}}",
+						"com",
+						"au"
+					],
+					"path": [
+						"JMSGatewayAPI",
+						"Order",
+						"CreateSimOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{verser_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FromDateTime\": \"2019-08-21 01:01:01\",\r\n    \"ToDateTime\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "https://{{verser_env}}.com.au/JMSGatewayAPI/Order/OrderStatus",
+					"protocol": "https",
+					"host": [
+						"{{verser_env}}",
+						"com",
+						"au"
+					],
+					"path": [
+						"JMSGatewayAPI",
+						"Order",
+						"OrderStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order (Test)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{verser_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    [\r\n        {\r\n            \"TIABOrderId\": \"APIPVT002\",\r\n            \"Salutation\": \"MR\",\r\n            \"FirstName\": \"Richard\",\r\n            \"Surname\": \"Bartlett\",\r\n            \"AddressLine1\": \"14 SABER ST\",\r\n            \"AddressLine2\": null,\r\n            \"AddressLine3\": null,\r\n            \"Locality\": \"WOOLLAHRA\",\r\n            \"State\": \"NSW\",\r\n            \"Postcode\": \"2025\",\r\n            \"ContactNumber\": \"0402294639\",\r\n            \"OrderType\": \"PhoneSim\",\r\n            \"SKU\": \"IP732BK\"\r\n        }\r\n    ]\r\n]\r\n"
+				},
+				"url": {
+					"raw": "https://{{verser_env}}.com.au/JMSGatewayAPI/Order/CreateTestOrder",
+					"protocol": "https",
+					"host": [
+						"{{verser_env}}",
+						"com",
+						"au"
+					],
+					"path": [
+						"JMSGatewayAPI",
+						"Order",
+						"CreateTestOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

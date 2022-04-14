@@ -1,0 +1,19 @@
+uuid: b7468f2a-8e15-4fe6-87f2-fcc5b2507ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_product_title
+    - paragraphs.paragraphs_type.basic_details
+id: paragraph.basic_details.field_product_title
+field_name: field_product_title
+entity_type: paragraph
+bundle: basic_details
+label: 'Product title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

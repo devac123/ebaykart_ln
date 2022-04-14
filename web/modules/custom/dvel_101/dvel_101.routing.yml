@@ -1,0 +1,10 @@
+dvel_101.101:
+  path: '/drupal_behavior'
+  defaults: 
+   _controller: '\Drupal\dvel_101\Controller\DbController::custom_behavior' 
+   _title: 'Learning Drupal Custom Module creation'
+  requirements:
+    _access: 'TRUE'
+          
+
+          

@@ -1,0 +1,8 @@
+cuddly-slider:
+  version: 1.x
+  header: true
+  js:
+    js/script.js: {}
+  dependencies:
+  - core/jquery
+  - core/jquery.once  

@@ -1,0 +1,4 @@
+name: Custom_ext
+description: custom_ect description
+type: module
+core_version_requirement: ^8 || ^9

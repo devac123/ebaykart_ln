@@ -1,0 +1,20 @@
+label: Profiele
+display:
+  default:
+    display_title: Meester
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Pas toe'
+          reset_button_label: Herstel
+      arguments:
+        uid:
+          exception:
+            title: Alle
+        type:
+          exception:
+            title: Alle
+        status:
+          exception:
+            title: Alle
+      title: Profiele

@@ -1,0 +1,27 @@
+display:
+  default:
+    display_title: Meester
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtreer
+          reset_button_label: Herstel
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+      fields:
+        code:
+          label: Kode
+        operations:
+          label: Aksies
+      filters:
+        code:
+          expose:
+            label: Kode
+      arguments:
+        promotion_id:
+          exception:
+            title: Alle
+  page_1:
+    display_title: Bladsy

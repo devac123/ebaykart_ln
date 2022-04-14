@@ -1,0 +1,40 @@
+label: Produkte
+display:
+  default:
+    display_title: Meester
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtreer
+          reset_button_label: Herstel
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Alle -'
+          tags:
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laaste »'
+      fields:
+        title:
+          label: Titel
+        type:
+          label: Tipe
+        status:
+          label: Status
+          settings:
+            format_custom_true: Gepubliseerd
+            format_custom_false: Ongepubliseerd
+        operations:
+          label: Aksies
+      filters:
+        type:
+          expose:
+            label: Tipe
+        title:
+          expose:
+            label: Titel
+      title: Produkte
+  page_1:
+    display_title: Bladsy
