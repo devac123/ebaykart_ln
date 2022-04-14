@@ -8,7 +8,7 @@ commerce_rec.configuration:
 
 # children rout of commerce rec
 commerce_rec.addProduct:
-  title: 'Configuration Form Example'
+  title: 'Roles And variations'
   route_name: 'commerce_rec.addProduct'
   parent: 'commerce_rec.configuration'
   description: 'Sets Configuration Form Example'

@@ -13,6 +13,7 @@ module:
   breakpoint: 0
   ckeditor: 0
   color: 0
+  color_field: 0
   comment: 0
   commerce: 0
   commerce_cart: 0
@@ -23,8 +24,11 @@ module:
   commerce_payment: 0
   commerce_payment_example: 0
   commerce_price: 0
+  commerce_pricelist: 0
   commerce_product: 0
   commerce_promotion: 0
+  commerce_rec: 0
+  commerce_shipping: 0
   commerce_store: 0
   commerce_tax: 0
   config: 0
@@ -33,6 +37,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  dvel_101: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -56,13 +61,17 @@ module:
   menu_ui: 0
   node: 0
   options: 0
+  orderplace: 0
   page_cache: 0
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  physical: 0
   profile: 0
   rdf: 0
   search: 0
+  search_api: 0
+  search_api_db: 0
   shortcut: 0
   state_machine: 0
   system: 0

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.default
+    - field.field.commerce_product.default.field_about_product
   module:
     - commerce_product
+    - entity_reference_revisions
 _core:
   default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
 id: commerce_product.default.default
@@ -13,6 +15,15 @@ targetEntityType: commerce_product
 bundle: default
 mode: default
 content:
+  field_about_product:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
   title:
     type: string
     label: hidden
@@ -25,8 +36,6 @@ content:
     type: commerce_add_to_cart
     label: hidden
     settings:
-      show_quantity: false
-      default_quantity: '1'
       combine: true
     third_party_settings: {  }
     weight: 1
@@ -34,5 +43,6 @@ content:
 hidden:
   created: true
   langcode: true
+  search_api_excerpt: true
   stores: true
   uid: true

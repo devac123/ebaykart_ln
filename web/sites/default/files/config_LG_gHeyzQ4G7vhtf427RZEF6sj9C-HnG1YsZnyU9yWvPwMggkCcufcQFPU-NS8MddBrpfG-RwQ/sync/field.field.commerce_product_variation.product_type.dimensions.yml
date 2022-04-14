@@ -1,0 +1,21 @@
+uuid: 84df8c88-c800-435e-824e-fffe8c93285d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.product_type
+    - field.storage.commerce_product_variation.dimensions
+  module:
+    - physical
+id: commerce_product_variation.product_type.dimensions
+field_name: dimensions
+entity_type: commerce_product_variation
+bundle: product_type
+label: Dimensions
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: physical_dimensions
