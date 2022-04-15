@@ -62,7 +62,7 @@ class RoleAssignForm extends ConfigFormBase {
       $role_value = $form['role']['#options'][$role_key]; 
       parent::submitForm($form, $form_state);
          $this->config('commerce_rec.admin-settings')
-        ->set($val, $role_value)->save();
+        ->set(strtolower($val), $role_value)->save();
     }
 
 

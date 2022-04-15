@@ -5,16 +5,7 @@ commerce_rec.configuration:
     _title: 'commerce_rec'
   requirements:
     _permission: 'access commerce administration pages'
-
-commerce_rec.Variation_list:
-  path: '/admin/commerce/config/variation_list'
-  defaults:
-    _controller: 'Drupal\commerce_rec\Controller\VariationListController::productVariations'
-    _title: 'Product Variations'
-  requirements:
-     _permission: 'administer site configuration'
-  options:  
-    _admin_route: TRUE    
+  
 
 commerce_rec.addProduct:
   path: '/admin/commerce/config/product-var'

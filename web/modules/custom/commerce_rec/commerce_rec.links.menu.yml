@@ -14,9 +14,3 @@ commerce_rec.addProduct:
   description: 'Sets Configuration Form Example'
   weight: 100  
 
-commerce_rec.Variation_list:
-  title: 'Product Variation'
-  route_name: 'commerce_rec.Variation_list'
-  parent: 'commerce_rec.configuration'
-  description: 'List all product variation'
-  weight: 100  
