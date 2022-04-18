@@ -10,7 +10,7 @@ use Drupal\commerce_product\Entity\ProductVariationType;
 
 class RoleAssignForm extends ConfigFormBase {
     public function getFormId() {
-        return 'Add_user';
+        return 'assign_role';
       }
     /**  
    * {@inheritdoc}  

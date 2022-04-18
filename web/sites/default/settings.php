@@ -1,7 +1,7 @@
 <?php
 
 // phpcs:ignoreFile
-$config['system.logging']['error_level'] = 'verbose';
+
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'nTYodpP8rwm202AlIbdVZin_gilOwtQehEo1vz9IbY1f_Cei85h9n4e09EMgJ1tBixxBPsNWSA';
+$settings['hash_salt'] = 'c6gmeMBEA7zZg5k_oaaXlVdZMGCpdA_Ri3vKcE53d3QloXWNoU58dgCDf0cHJt7h_-bNtn5qHA';
 
 /**
  * Deployment identifier.
@@ -779,4 +779,4 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_LG_gHeyzQ4G7vhtf427RZEF6sj9C-HnG1YsZnyU9yWvPwMggkCcufcQFPU-NS8MddBrpfG-RwQ/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_HA-b4BiQiWNnH0Vd8xFXgU0WMrQIo0XtB2Ha-KYIJgzdkNAZz6jUzcINATgDgvaBzwVOHeW5OQ/sync';

@@ -1,8 +1,0 @@
-uuid: e5b53f89-c48b-4ae4-90c0-3101c67de082
-langcode: en
-status: true
-dependencies: {  }
-name: 'Product Type'
-vid: product_type
-description: ''
-weight: 0

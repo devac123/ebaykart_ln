@@ -17,16 +17,11 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/admin_toolbar": "^3.1",
-        "drupal/commerce": "^2.29",
-        "drupal/commerce_demo": "^2.0",
+        "drupal/commerce": "^2.30",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
-        "drupal/gtranslate": "^1.14",
-        "drupal/inline_entity_form": "^1.0@RC",
-        "drupal/lang_dropdown": "^2.0",
-        "drupal/paragraphs": "^1.13",
-        "drush/drush": "^11.0"
+        "drupal/inline_entity_form": "^1.0@RC"
     },
     "conflict": {
         "drupal/drupal": "*"
