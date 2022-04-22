@@ -7,6 +7,9 @@ use Drupal\state_machine\Event\WorkflowTransitionEvent;
 use Drupal\user\Entity\User;
 use Drupal\commerce_order\Entity\Order;
 use Drupal\commerce_product\Entity\ProductVariationType;
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Class OrderCompleteSubscriber.
@@ -57,6 +60,8 @@ class OrderCompleteSubscriber implements EventSubscriberInterface {
       $user = User::load($uid[0]['target_id']);
       $user->addRole(strtolower($role));
       $user->save();
+      
+      
   }
 
   

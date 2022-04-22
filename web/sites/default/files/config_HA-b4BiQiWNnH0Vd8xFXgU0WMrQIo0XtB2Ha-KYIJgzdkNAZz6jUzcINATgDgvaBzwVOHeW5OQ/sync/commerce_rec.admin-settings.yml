@@ -1,0 +1,4 @@
+default: Authenticated
+variation_1: Content_editor
+testing_variation_3: Authenticated
+testing_4: Buyer

@@ -1,0 +1,10 @@
+uuid: db77bdf8-98ef-4a66-a8ec-bed6595cd70e
+langcode: en
+status: true
+dependencies: {  }
+id: testing_variation_3
+label: 'Testing variation 3'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false

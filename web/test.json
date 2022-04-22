@@ -1,0 +1,560 @@
+{
+    "html": {
+        "#type": "html",
+        "#theme": "html",
+        "#defaults_loaded": true,
+        "#cache": "tags": [],
+        "max-age": -1,
+        "#attached": [],
+        "#children": "",
+        "#render_children": true
+    },
+    "theme_hook_original": "html",
+    "attributes": "class": [
+        "toolbar-icon-9",
+        "toolbar-tray-open",
+        "toolbar-horizontal",
+        "toolbar-fixed",
+        "toolbar-loading",
+        "layout-one-sidebar",
+        "layout-sidebar-first"
+    ],
+    "title_attributes": [],
+    "content_attributes": [],
+    "title_prefix": [],
+    "title_suffix": [],
+    "db_is_active": true,
+    "is_admin": true,
+    "logged_in": true,
+    "user": "_serviceId": "current_user",
+    "directory": "themes\/cust_theme",
+    "page": {
+        "#type": "page",
+        "#cache": "tags": [
+            "config:block_list",
+            "config:block.block.cust_theme_account_menu",
+            "config:block.block.cust_theme_branding",
+            "config:block.block.cust_theme_breadcrumbs",
+            "config:block.block.cust_theme_content",
+            "config:block.block.cust_theme_help",
+            "config:block.block.cust_theme_local_actions",
+            "config:block.block.cust_theme_local_tasks",
+            "config:block.block.cust_theme_page_title",
+            "config:block.block.cust_theme_footer",
+            "config:block.block.cust_theme_powered",
+            "config:block.block.cust_theme_search",
+            "config:block.block.cust_theme_tools",
+            "config:block.block.cust_theme_main_menu",
+            "config:block.block.cust_theme_messages"
+        ],
+        "contexts": [
+            "languages:language_interface",
+            "user.permissions",
+            "session.exists",
+            "cookies:big_pipe_nojs"
+        ],
+        "max-age": -1,
+        "sidebar_first": {
+            "cust_theme_search": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_search"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_search"
+                ],
+                "max-age": -1,
+                "#weight": -1,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_search",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "cust_theme_footer": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_footer"
+                ],
+                "contexts": [
+                    "languages:language_interface",
+                    "route.menu_active_trails:footer"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_footer",
+                    "config:system.menu.footer"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_footer",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "cust_theme_tools": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_tools"
+                ],
+                "contexts": [
+                    "languages:language_interface",
+                    "route.menu_active_trails:tools"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_tools",
+                    "config:system.menu.tools"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_tools",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "cust_theme_powered": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_powered"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_powered"
+                ],
+                "max-age": -1,
+                "#weight": 10,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_powered",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "sidebar_first"
+        },
+        "content": {
+            "cust_theme_page_title": {
+                "#cache": "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_page_title"
+                ],
+                "max-age": -1,
+                "#weight": -50,
+                "#theme": "block",
+                "#attributes": [],
+                "#contextual_links": {
+                    "block": {
+                        "route_parameters": "block": "cust_theme_page_title"
+                    }
+                },
+                "#configuration": "id": "page_title_block",
+                "label": "Page title",
+                "label_display": "0",
+                "provider": "core",
+                "#plugin_id": "page_title_block",
+                "#base_plugin_id": "page_title_block",
+                "#derivative_plugin_id": null,
+                "#id": "cust_theme_page_title",
+                "#pre_render": [
+                    "Drupal\\block\\BlockViewBuilder::preRender"
+                ],
+                "#block": "provider": null,
+                "#attached": []
+            },
+            "cust_theme_local_tasks": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_local_tasks"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_local_tasks"
+                ],
+                "max-age": -1,
+                "#weight": -40,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_local_tasks",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "cust_theme_help": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_help"
+                ],
+                "contexts": [
+                    "languages:language_interface",
+                    "route"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_help"
+                ],
+                "max-age": -1,
+                "#weight": -30,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_help",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "cust_theme_local_actions": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_local_actions"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_local_actions"
+                ],
+                "max-age": -1,
+                "#weight": -20,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_local_actions",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "cust_theme_content": {
+                "#cache": "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_content"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#theme": "block",
+                "#attributes": [],
+                "#configuration": "id": "system_main_block",
+                "label": "Main page content",
+                "label_display": "0",
+                "provider": "system",
+                "#plugin_id": "system_main_block",
+                "#base_plugin_id": "system_main_block",
+                "#derivative_plugin_id": null,
+                "#id": "cust_theme_content",
+                "#pre_render": [
+                    "Drupal\\block\\BlockViewBuilder::preRender"
+                ],
+                "#block": "provider": null,
+                "#attached": []
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "content"
+        },
+        "header": {
+            "cust_theme_branding": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_branding"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_branding",
+                    "config:system.site"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_branding",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "header"
+        },
+        "primary_menu": {
+            "cust_theme_main_menu": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_main_menu"
+                ],
+                "contexts": [
+                    "languages:language_interface",
+                    "route.menu_active_trails:main"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_main_menu",
+                    "config:system.menu.main"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_main_menu",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "primary_menu"
+        },
+        "secondary_menu": {
+            "cust_theme_account_menu": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_account_menu"
+                ],
+                "contexts": [
+                    "languages:language_interface",
+                    "route.menu_active_trails:account"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_account_menu",
+                    "config:system.menu.account"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_account_menu",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "secondary_menu"
+        },
+        "highlighted": {
+            "cust_theme_messages": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_messages"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_messages"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_messages",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "highlighted"
+        },
+        "breadcrumb": {
+            "cust_theme_breadcrumbs": {
+                "#cache": "keys": [
+                    "entity_view",
+                    "block",
+                    "cust_theme_breadcrumbs"
+                ],
+                "contexts": [
+                    "languages:language_interface"
+                ],
+                "tags": [
+                    "block_view",
+                    "config:block.block.cust_theme_breadcrumbs"
+                ],
+                "max-age": -1,
+                "#weight": 0,
+                "#lazy_builder": [
+                    "Drupal\\block\\BlockViewBuilder::lazyBuilder",
+                    [
+                        "cust_theme_breadcrumbs",
+                        "full",
+                        null
+                    ]
+                ]
+            },
+            "#sorted": true,
+            "#theme_wrappers": [
+                "region"
+            ],
+            "#region": "breadcrumb"
+        },
+        "#attached": {
+            "html_head": [
+                [
+                    {
+                        "#tag": "meta",
+                        "#noscript": true,
+                        "#attributes": "http-equiv": "Refresh",
+                        "content": "0; URL=\/ebaykart\/web\/big_pipe\/no-js?destination=\/ebaykart\/web\/"
+                    },
+                    "big_pipe_detect_nojs"
+                ],
+                [
+                    {
+                        "#tag": "meta",
+                        "#attributes": "charset": "utf-8",
+                        "#weight": -1000
+                    },
+                    "system_meta_content_type"
+                ],
+                [
+                    {
+                        "#type": "html_tag",
+                        "#tag": "meta",
+                        "#attributes": "name": "Generator",
+                        "content": "Drupal 9 (https:\/\/www.drupal.org); Commerce 2"
+                    },
+                    "system_meta_generator"
+                ],
+                [
+                    {
+                        "#tag": "meta",
+                        "#attributes": "name": "MobileOptimized",
+                        "content": "width"
+                    },
+                    "MobileOptimized"
+                ],
+                [
+                    {
+                        "#tag": "meta",
+                        "#attributes": "name": "HandheldFriendly",
+                        "content": "true"
+                    },
+                    "HandheldFriendly"
+                ],
+                [
+                    {
+                        "#tag": "meta",
+                        "#attributes": "name": "viewport",
+                        "content": "width=device-width, initial-scale=1.0"
+                    },
+                    "viewport"
+                ]
+            ],
+            "library": [
+                "contextual\/drupal.contextual-links",
+                "system\/base",
+                "bartik\/classy.base",
+                "bartik\/classy.messages",
+                "core\/normalize",
+                "bartik\/global-styling",
+                "core\/drupal.active-link"
+            ],
+            "html_head_link": [
+                [
+                    "rel": "icon",
+                    "href": "\/ebaykart\/web\/core\/misc\/favicon.ico",
+                    "type": "image\/vnd.microsoft.icon"
+                ]
+            ]
+        },
+        "#title": "Page not found"
+    },
+    "page_top": {
+        "toolbar": {
+            "#type": "toolbar",
+            "#access": true,
+            "#cache": "keys": [
+                "toolbar"
+            ],
+            "contexts": [
+                "user.permissions"
+            ]
+        }
+    },
+    "page_bottom": null,
+    "html_attributes": " lang=\"en\" dir=\"ltr\" prefix=\"content: http:\/\/purl.org\/rss\/1.0\/modules\/content\/ dc: http:\/\/purl.org\/dc\/terms\/ foaf: http:\/\/xmlns.com\/foaf\/0.1\/ og: http:\/\/ogp.me\/ns# rdfs: http:\/\/www.w3.org\/2000\/01\/rdf-schema# schema: http:\/\/schema.org\/ sioc: http:\/\/rdfs.org\/sioc\/ns# sioct: http:\/\/rdfs.org\/sioc\/types# skos: http:\/\/www.w3.org\/2004\/02\/skos\/core# xsd: http:\/\/www.w3.org\/2001\/XMLSchema# \"",
+    "root_path": "themes",
+    "head_title": "title": "Page not found",
+    "name": "ebaykart",
+    "placeholder_token": "pGlE4OucZ8nlzVYfV5GawhLKpuIu-AQISrOYIKnOb_RdirX4YQnj5Pr7N0BeowkcgmZaWzkEiw",
+    "#attached": {
+        "html_response_attachment_placeholders": "styles": "",
+        "scripts": "",
+        "scripts_bottom": "",
+        "head": ""
+    },
+    "#cache": "contexts": [
+        "user.permissions"
+    ]
+}

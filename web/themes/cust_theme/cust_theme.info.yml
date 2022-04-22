@@ -1,0 +1,5 @@
+name: Custom theme
+description: To add some hook 
+type: theme
+core_version_requirement: ^8 || ^9
+base theme: bartik

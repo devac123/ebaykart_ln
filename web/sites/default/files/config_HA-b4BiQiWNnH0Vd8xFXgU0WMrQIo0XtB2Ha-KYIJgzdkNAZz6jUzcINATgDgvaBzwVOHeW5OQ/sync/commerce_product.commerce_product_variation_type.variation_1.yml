@@ -1,0 +1,10 @@
+uuid: 5d255a82-7a09-4655-a998-260b9178816b
+langcode: en
+status: true
+dependencies: {  }
+id: variation_1
+label: variation_1
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false

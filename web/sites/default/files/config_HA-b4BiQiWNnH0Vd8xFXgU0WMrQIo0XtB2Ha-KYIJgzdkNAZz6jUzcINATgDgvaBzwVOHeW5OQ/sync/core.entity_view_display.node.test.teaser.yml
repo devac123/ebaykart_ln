@@ -1,0 +1,24 @@
+uuid: 62f63357-8ddb-457c-8def-cc55550170e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.test.field_media
+    - node.type.test
+  module:
+    - user
+id: node.test.teaser
+targetEntityType: node
+bundle: test
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_media: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,15 @@
+uuid: cab205ff-87c3-4539-b8e1-c200f0866cab
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite_user
+  module:
+    - flag
+id: flag_action.favorite_user_flag
+label: 'Flag this item'
+type: user
+plugin: 'flag_action:favorite_user_flag'
+configuration:
+  flag_id: favorite_user
+  flag_action: flag

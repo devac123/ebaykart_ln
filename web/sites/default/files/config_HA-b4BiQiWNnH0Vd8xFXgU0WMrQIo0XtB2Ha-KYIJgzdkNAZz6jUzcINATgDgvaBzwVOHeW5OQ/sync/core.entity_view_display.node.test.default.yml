@@ -1,0 +1,31 @@
+uuid: 56e8079b-ab88-4f29-8760-f51148d02e76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test.field_media
+    - node.type.test
+  module:
+    - user
+id: node.test.default
+targetEntityType: node
+bundle: test
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

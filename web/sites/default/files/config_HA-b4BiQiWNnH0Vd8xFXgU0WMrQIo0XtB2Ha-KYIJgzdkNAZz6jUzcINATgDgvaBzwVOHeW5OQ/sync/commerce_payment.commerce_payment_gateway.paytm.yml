@@ -1,0 +1,19 @@
+uuid: a8c91a85-32c5-4e11-b8f7-860bfc219e55
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_payment_example
+id: paytm
+label: Paytm
+weight: null
+plugin: example_stored_offsite_redirect
+configuration:
+  display_label: 'Example Stored Offsite'
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  redirect_method: post
+conditions: {  }
+conditionOperator: AND

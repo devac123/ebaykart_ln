@@ -1,0 +1,11 @@
+uuid: a4950e96-2ab9-4171-b162-8091015859aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.testing_5
+id: commerce_product_variation.testing_5
+target_entity_type_id: commerce_product_variation
+target_bundle: testing_5
+default_langcode: site_default
+language_alterable: false

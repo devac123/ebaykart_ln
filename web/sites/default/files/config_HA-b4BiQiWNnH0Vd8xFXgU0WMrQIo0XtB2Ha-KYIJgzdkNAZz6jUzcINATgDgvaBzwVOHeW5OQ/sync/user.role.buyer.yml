@@ -1,0 +1,9 @@
+uuid: 52906c43-c11f-45f0-8b4b-7f9b6168deb9
+langcode: en
+status: true
+dependencies: {  }
+id: buyer
+label: Buyer
+weight: 4
+is_admin: null
+permissions: {  }

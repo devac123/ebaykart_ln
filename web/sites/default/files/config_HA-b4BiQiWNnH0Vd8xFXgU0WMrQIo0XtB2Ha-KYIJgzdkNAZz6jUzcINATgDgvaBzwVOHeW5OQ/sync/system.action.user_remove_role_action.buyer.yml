@@ -1,0 +1,14 @@
+uuid: 9b6451cc-f5ff-4782-9d0b-b55d064aa590
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.buyer
+  module:
+    - user
+id: user_remove_role_action.buyer
+label: 'Remove the Buyer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: buyer
