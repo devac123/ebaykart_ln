@@ -22,8 +22,11 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
+        "drupal/entity_update": "^2.0@RC",
         "drupal/flag": "^4.0@beta",
+        "drupal/group": "^1.4",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/php": "^1.1",
         "drupal/restui": "^1.20",
         "drupal/search_api_solr": "^4.2",
         "drush/drush": "^11.0"

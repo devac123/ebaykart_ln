@@ -17,3 +17,11 @@ commerce_rec.addProduct:
   options:  
     _admin_route: TRUE    
 
+commerce_rec.delete_group:
+  path: '/delete/group/{id}'
+  defaults:
+    _controller: '\Drupal\commerce_rec\Controller\TestController::deleteGroup'
+    _title: 'Delete Traing Group'
+  requirements:
+    _permission: 'access content'
+

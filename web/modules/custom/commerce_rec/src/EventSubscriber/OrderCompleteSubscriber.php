@@ -61,7 +61,6 @@ class OrderCompleteSubscriber implements EventSubscriberInterface {
       $user->addRole(strtolower($role));
       $user->save();
       
-      
   }
 
   
