@@ -1,0 +1,39 @@
+<?php
+
+namespace Drupal\student_registration\Controller; 
+
+use Drupal\user\Entity\User;
+// use Drupal\Core\Cache\CacheableDependencyInterface;
+use Drupal\Core\Controller\ControllerBase;
+// use Drupal\Core\Render\RendererInterface;
+// use Drupal\search\Form\SearchPageForm;
+// use Drupal\search\SearchPageInterface;
+// use Drupal\search\SearchPageRepositoryInterface;
+// use Symfony\Component\DependencyInjection\ContainerInterface;
+// use Symfony\Component\HttpFoundation\Request;
+use Drupal\Core\Database\Query;
+use Drupal\Core\Database\Connection;
+/**
+ * Route controller for search.
+ */
+class SearchController extends ControllerBase {
+    
+    public function insertCustom(){
+      $str = "";
+      
+      foreach($_GET as $key=>$val){
+          $str .=$key;
+          $str .="=";
+          $str .=$val;
+      }
+      // dd(\Drupal::request()->query->all());
+        $connection = \Drupal::service('database');
+        $query = $connection->insert('search_data')->fields([
+          'uid' => \Drupal::currentUser()->id(),
+          'name' => \Drupal::currentUser()->getDisplayName(),
+          'current_path' => \Drupal::request()->getPathInfo(),
+          'search_data'=> $str ,
+        ])->execute();
+    }
+
+}

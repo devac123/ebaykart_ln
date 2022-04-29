@@ -28,12 +28,13 @@ class RoleAssignForm extends ConfigFormBase {
                                 <th>product variation type</th>
                                 <th>Role</th>
                             </thead>
+                            <tbody>
                             variation_type$
+                            </tbody>
                         </table>';
         // load all the variationtype                        
         $product_variation_types = \Drupal::entityTypeManager()->getStorage('commerce_product_variation_type')->loadMultiple();
          $var_type = "";
-
         foreach ($product_variation_types as $key => $value) {
           $ent = \Drupal::entityTypeManager()->getStorage('commerce_rec')->loadByProperties(
             ['variation_type' => strtolower($key)]);
@@ -42,10 +43,10 @@ class RoleAssignForm extends ConfigFormBase {
              $ro = $ro->role->value;
           }  
           if($ro == null){
-            $var_type .= '<tbody><tr><td>'. $key .'</td>'.'<td>'. '-' .'</td>'.'</tr></tbody>';
+            $var_type .= '<tr><td>'. $key .'</td>'.'<td>'. '-' .'</td>'.'</tr>';
           }
           else{
-            $var_type .= '<tbody><tr><td>'. $key .'</td>'.'<td>'. $ro .'</td>'.'</tr></tbody>';
+            $var_type .= '<tr><td>'. $key .'</td>'.'<td>'. $ro .'</td>'.'</tr>';
           }
         }
         
@@ -98,15 +99,6 @@ class RoleAssignForm extends ConfigFormBase {
 
       $role_key = $form_state->getValue('role');
       $role_value = $form['role']['#options'][$role_key];
-      
-      // parent::submitForm($form, $form_state);
-      //    $this->config('commerce_rec.admin-settings')
-      //   ->set(strtolower($val), $role_value)->save();
-        
-      //   $config = \Drupal::config('commerce_rec.admin-settings');
-      //   $role = $config->get();
-   
-        // $data = \Drupal::entityTypeManager()->getStorage('commerce_rec')->loadMultiple();
 
         $data = \Drupal::entityTypeManager()->getStorage('commerce_rec')->loadByProperties(
           ['variation_type' => strtolower($val)]);
