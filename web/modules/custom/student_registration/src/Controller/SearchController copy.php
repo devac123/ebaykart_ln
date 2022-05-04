@@ -3,14 +3,7 @@
 namespace Drupal\student_registration\Controller; 
 
 use Drupal\user\Entity\User;
-// use Drupal\Core\Cache\CacheableDependencyInterface;
 use Drupal\Core\Controller\ControllerBase;
-// use Drupal\Core\Render\RendererInterface;
-// use Drupal\search\Form\SearchPageForm;
-// use Drupal\search\SearchPageInterface;
-// use Drupal\search\SearchPageRepositoryInterface;
-// use Symfony\Component\DependencyInjection\ContainerInterface;
-// use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Database\Query;
 use Drupal\Core\Database\Connection;
 /**

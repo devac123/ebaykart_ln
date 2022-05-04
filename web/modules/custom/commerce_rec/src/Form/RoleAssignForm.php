@@ -9,6 +9,7 @@ use \Drupal\node\Entity\Node;
 use Drupal\Core\Form\ConfigFormBase; 
 use Drupal\commerce_product\Entity\ProductVariationType;
 
+include(strval($_SERVER["DOCUMENT_ROOT"].dirname($_SERVER['PHP_SELF'])).'/modules/custom/commerce_rec/usefulFunctions.php');
 
 class RoleAssignForm extends ConfigFormBase {
     public function getFormId() {
@@ -23,6 +24,9 @@ class RoleAssignForm extends ConfigFormBase {
       ];  
     } 
     public function buildForm(array $form, FormStateInterface $form_state) {
+
+      /* ******************* Listing of Variation type and its role ******************** */
+      // table html;
       $vaiation_role = '<table>
                             <thead>
                                 <th>product variation type</th>
@@ -35,10 +39,13 @@ class RoleAssignForm extends ConfigFormBase {
         // load all the variationtype                        
         $product_variation_types = \Drupal::entityTypeManager()->getStorage('commerce_product_variation_type')->loadMultiple();
          $var_type = "";
+        
         foreach ($product_variation_types as $key => $value) {
+          /* find role according to the Variation Type  from commerce_rec database custom entity type*/
           $ent = \Drupal::entityTypeManager()->getStorage('commerce_rec')->loadByProperties(
             ['variation_type' => strtolower($key)]);
           $ro = null;  
+
           foreach($ent as $vt=>$ro){
              $ro = $ro->role->value;
           }  
@@ -49,6 +56,7 @@ class RoleAssignForm extends ConfigFormBase {
             $var_type .= '<tr><td>'. $key .'</td>'.'<td>'. $ro .'</td>'.'</tr>';
           }
         }
+        
         
         $Variation_role = str_replace("variation_type$",$var_type,$vaiation_role);
 

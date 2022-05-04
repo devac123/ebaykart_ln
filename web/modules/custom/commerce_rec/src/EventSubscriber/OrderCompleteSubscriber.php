@@ -7,9 +7,7 @@ use Drupal\state_machine\Event\WorkflowTransitionEvent;
 use Drupal\user\Entity\User;
 use Drupal\commerce_order\Entity\Order;
 use Drupal\commerce_product\Entity\ProductVariationType;
-use Drupal\file\Entity\File;
-use Drupal\media\Entity\Media;
-use Drupal\image\Entity\ImageStyle;
+
 
 /**
  * Class OrderCompleteSubscriber.
@@ -43,22 +41,26 @@ class OrderCompleteSubscriber implements EventSubscriberInterface {
     return $events;
   }
 
-
-  // https://www.drupal.org/docs/creating-custom-modules/defining-and-using-your-own-configuration-in-drupal
   public function orderCompleteHandler(WorkflowTransitionEvent $event) {
       $order = $event->getEntity();
       $uid = $order->get('uid')->getValue();
       $var_Type_id = "";
 
-    foreach ($order->getItems() as $key => $order_item) {
-        $product_variation = $order_item->getPurchasedEntity();
-        $var_Type_id = $product_variation->bundle();
-    }
- 
-      $config = \Drupal::config('commerce_rec.admin-settings');
-      $role = $config->get($var_Type_id);
-      $user = User::load($uid[0]['target_id']);
-      $user->addRole(strtolower($role));
+      foreach ($order->getItems() as $key => $order_item) {
+          $product_variation = $order_item->getPurchasedEntity();
+          $var_Type_id = $product_variation->bundle();
+      }
+
+      $ent = \Drupal::entityTypeManager()->getStorage('commerce_rec')->loadByProperties(
+        ['variation_type' => $var_Type_id]);
+      
+      $ro = null;  
+      foreach($ent as $vt=>$ro){
+          $ro = $ro->role->value;
+      }    
+
+      $user = User::load(\Drupal::currentUser()->id());
+      $user->addRole(strtolower($ro));
       $user->save();
       
   }

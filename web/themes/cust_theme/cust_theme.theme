@@ -1,12 +1,8 @@
 <?php
 
-
-function THEME_preprocess_html(&$var){
- $role = \Drupal::currentUser()->getRoles();
- if(in_array( 'administrator' ,role ) ){
- \Drupal::logger('role')->notice('admin');
- 
- }
- 
+function cust_theme_preprocess(&$var,$hook){
+    $role = \Drupal::currentUser()->getRoles();
+    $var['cust'] = "value";
+    
+    
 }
-
