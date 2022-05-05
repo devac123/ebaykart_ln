@@ -31,4 +31,13 @@ class TestController{
         return;
         
     }
+
+    public function node_activity(){
+        
+
+    
+        return array(
+            '#markup' => 'D'
+        );
+    }
 }

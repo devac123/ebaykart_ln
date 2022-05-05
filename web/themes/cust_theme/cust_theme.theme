@@ -6,3 +6,19 @@ function cust_theme_preprocess(&$var,$hook){
     
     
 }
+
+function cust_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+//     if($form_id == "commerce_checkout_flow_multistep_default"){
+//         $form['mymodule'] = array(
+//             '#type' => 'textarea',
+//             '#options' => t('Enable'),
+//             '#title' => t('Full Address'),
+//             '#description' => t('Custom field created using form alter hook'),
+//            );
+//     }
+    
+
+
+    
+    
+}
